@@ -6,6 +6,9 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task, AskUserQuestion
 
 # 仕様レビュースキル (spec-reviewer)
 
+> ⚠️ 非推奨（互換運用）: 新規機能は `/implement-feature` を使用してください。
+> このスキルは既存運用の互換維持のため残置されています。
+
 **コンセプト**: plan.md・design.md・tasklist.md の整合性を評価し、承認ゲートを管理する
 
 **引数**:

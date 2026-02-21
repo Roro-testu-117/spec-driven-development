@@ -6,6 +6,9 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task, AskUserQuestion
 
 # 仕様実装スキル (spec-code-applier)
 
+> ⚠️ 非推奨（互換運用）: 新規機能は `/implement-feature` を使用してください。
+> このスキルは既存運用の互換維持のため残置されています。
+
 **コンセプト**: tasklist.md をそのまま順番に実装し、チェックボックスを更新する
 
 **引数**:

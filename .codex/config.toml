@@ -1,0 +1,19 @@
+[profiles.devcontainer]
+sandbox_mode = "workspace-write"
+approval_policy = "never"
+
+[profiles.devcontainer.sandbox_workspace_write]
+network_access = true
+
+[permissions]
+allow = [
+  "Bash(ls:*)",
+  "Bash(find:*)",
+  "Bash(tree:*)",
+  "Bash(grep:*)",
+  "Bash(rg:*)",
+  "Bash(cat:*)",
+  "Bash(wc:*)",
+  "Bash(head:*)",
+  "Bash(tail:*)",
+]

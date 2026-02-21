@@ -6,6 +6,9 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task, AskUserQuestion
 
 # コードレビュースキル (spec-code-reviewer)
 
+> ⚠️ 非推奨（互換運用）: 新規機能は `/implement-feature` を使用してください。
+> このスキルは既存運用の互換維持のため残置されています。
+
 **コンセプト**: design.md と tasklist.md に対して実装内容を評価し、レビュー記録を残す
 
 **引数**:
