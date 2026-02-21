@@ -2,6 +2,7 @@
 .devcontainer_archived/.env
 **/.DS_Store
 .env
+**/settings.local.json
 
 # Python
 __pycache__/
@@ -20,3 +21,8 @@ uv.lock
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb_checkpoints
+
+# other
+hello.py
+
+
