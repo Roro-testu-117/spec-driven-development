@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude init:*)",
+      "Bash(uv --version:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(python -m pip:*)",
+      "Bash(tree:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(xargs cat:*)",
+      "Skill(implement-feature)",
+      "Bash(python:*)",
+      "Bash(uv run ruff:*)"
+    ]
+  }
+}

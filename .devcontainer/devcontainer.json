@@ -1,0 +1,38 @@
+{
+  "name": "LLM-Environment",
+  "dockerComposeFile": "./compose.yaml",
+  "service": "llm_env",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopContainer",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "oderwat.indent-rainbow",
+        "shardulm94.trailing-spaces",
+        "hediet.vscode-drawio",
+        "Continue.continue",
+        "Google.geminicodeassist",
+        "openai.chatgpt"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.ruff": "explicit",
+          "source.organizeImports.ruff": "explicit"
+        },
+        "notebook.formatOnSave.enabled": true,
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.formatOnSave": true
+        },
+        "ruff.configuration": "/workspace/pyproject.toml",
+        "python.analysis.typeCheckingMode": "basic"
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+[project]
+name = "llm-workspace"
+version = "0.1.0"
+description = "LLM Development Workspace"
+requires-python = ">=3.11"
+dependencies = [
+    # データ分析基本ライブラリ
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "matplotlib",
+    "japanize-matplotlib",
+    "seaborn",
+
+    # Hugging Face関連
+    "transformers[ja,torch]",
+
+    # LLMアプリケーション用
+    "langchain>=1.0.0",
+    "openai",
+    "langchain-openai",
+    "langchain-google-genai",
+    "langchain-anthropic",
+    "langchain-perplexity",
+    "langchain-chroma",
+    "langchain-cohere",
+    "flashrank",
+
+    # 画像処理/OCR
+    "pymupdf",
+    "pytesseract",
+    "pillow",
+
+    # その他
+    "tqdm",
+    "python-dotenv",
+
+    # JupyterLab
+    "jupyterlab",
+
+    # Streamlit
+    "streamlit>=1.40.0",
+    "watchdog",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+# 行の長さを88文字に設定（Black互換）
+line-length = 88
+indent-width = 4
+
+# Python 3.11をターゲット
+target-version = "py311"
+
+[tool.ruff.lint]
+# 有効にするルール
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+
+# 無視するルール
+ignore = [
+    "E501",  # 行が長すぎる（formatterが処理）
+    "B008",  # 関数呼び出しの引数でのデフォルト値
+    "B905",  # zip() without explicit strict parameter
+]
+
+# ファイルごとの設定
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # 未使用のインポートを許可
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+# isort設定（Black互換）
+known-first-party = ["llm_workspace"]

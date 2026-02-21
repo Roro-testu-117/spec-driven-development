@@ -1,0 +1,28 @@
+services:
+  llm_env:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    env_file:
+      - .env
+    restart: always
+    entrypoint: >
+      jupyter-lab --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token='' --notebook-dir=/workspace
+    expose:
+      - "8888"
+    ports:
+      # - ホスト側ポート:コンテナポート
+      - "127.0.0.1:9000:8888"
+    volumes:
+      - ../:/workspace
+      - ~/.ssh:/root/.ssh:ro
+      - ${HOME}/.continue:/root/.continue
+      - ${HOME}/.gemini:/root/.gemini
+      - ${HOME}/.codex:/root/.codex
+      - ${HOME}/.claude:/root/.claude
+      - ${HOME}/.claude.json:/root/.claude.json
+      - ${HOME}/Library/Application\ Support/google-vscode-extension:/root/.cache/google-vscode-extension
+      - vscode-server:/root/.vscode-server
+
+volumes:
+  vscode-server:
